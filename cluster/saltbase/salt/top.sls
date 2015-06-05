@@ -32,6 +32,7 @@ base:
     - kube-apiserver
     - kube-controller-manager
     - kube-scheduler
+    - kube-proxy
     - monit
 {% if grains['cloud'] is defined and not grains.cloud in [ 'aws', 'gce' ] %}
     - nginx

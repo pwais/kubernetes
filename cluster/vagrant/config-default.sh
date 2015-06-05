@@ -66,6 +66,9 @@ ELASTICSEARCH_LOGGING_REPLICAS=1
 # Optional: When set to true, heapster, Influxdb and Grafana will be setup as part of the cluster bring up.
 ENABLE_CLUSTER_MONITORING="${KUBE_ENABLE_CLUSTER_MONITORING:-true}"
 
+# Don't allow kubelet to run privileged containers
+ALLOW_PRIVILEGED=${ALLOW_PRIVILEGED:-false}
+
 # Extra options to set on the Docker command line.  This is useful for setting
 # --insecure-registry for local registries.
 DOCKER_OPTS=""

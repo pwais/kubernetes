@@ -46,6 +46,8 @@ KUBE_PROXY_TOKEN: $(yaml-quote ${KUBE_PROXY_TOKEN:-})
 ADMISSION_CONTROL: $(yaml-quote ${ADMISSION_CONTROL:-})
 MASTER_IP_RANGE: $(yaml-quote ${MASTER_IP_RANGE})
 CA_CERT: $(yaml-quote ${CA_CERT_BASE64})
+KUBERNETES_MASTER_NAME: $(yaml-quote ${MASTER_NAME})
+ALLOW_PRIVILEGED: $(yaml-quote ${ALLOW_PRIVILEGED:-false})
 EOF
 
   if [[ "${master}" == "true" ]]; then

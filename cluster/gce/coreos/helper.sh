@@ -57,6 +57,8 @@ MASTER_CERT: $(yaml-quote ${MASTER_CERT_BASE64:-})
 MASTER_KEY: $(yaml-quote ${MASTER_KEY_BASE64:-})
 KUBECFG_CERT: $(yaml-quote ${KUBECFG_CERT_BASE64:-})
 KUBECFG_KEY: $(yaml-quote ${KUBECFG_KEY_BASE64:-})
+KUBERNETES_MASTER_NAME: $(yaml-quote ${MASTER_NAME})
+ALLOW_PRIVILEGED: $(yaml-quote ${ALLOW_PRIVILEGED:-false})
 EOF
   else
     cat >>$file <<EOF
@@ -89,6 +91,7 @@ RKT_VERSION=$(yaml-quote ${RKT_VERSION})
 CA_CERT: $(yaml-quote ${CA_CERT_BASE64})
 KUBELET_CERT: $(yaml-quote ${KUBELET_CERT_BASE64:-})
 KUBELET_KEY: $(yaml-quote ${KUBELET_KEY_BASE64:-})
+ALLOW_PRIVILEGED: $(yaml-quote ${ALLOW_PRIVILEGED:-false})
 EOF
   fi
 }

@@ -68,6 +68,9 @@ ELASTICSEARCH_LOGGING_REPLICAS=1
 # Don't require https for registries in our local RFC1918 network
 EXTRA_DOCKER_OPTS="--insecure-registry 10.0.0.0/8"
 
+# Don't allow kubelet to run privileged containers
+ALLOW_PRIVILEGED=${ALLOW_PRIVILEGED:-false}
+
 # Optional: Install cluster DNS.
 ENABLE_CLUSTER_DNS=true
 DNS_SERVER_IP="10.0.0.10"
