@@ -79,6 +79,9 @@ DNS_SERVER_IP="10.247.0.10"
 DNS_DOMAIN="cluster.local"
 DNS_REPLICAS=1
 
+# Don't allow kubelet to run privileged containers
+ALLOW_PRIVILEGED=${ALLOW_PRIVILEGED:-false}
+
 # Optional: Enable setting flags for kube-apiserver to turn on behavior in active-dev
 #RUNTIME_CONFIG=""
 RUNTIME_CONFIG="api/v1"

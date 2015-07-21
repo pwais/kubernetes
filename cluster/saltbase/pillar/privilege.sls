@@ -1,2 +1,7 @@
-# If true, allow privileged containers to be created by API
-allow_privileged: false
+# TODO(pwais) delete this file
+## If true, allow privileged containers to be created by API
+#{% if pillar.get('allow_privileged', false) == true %}
+#allow_privileged: true
+#{% else %}
+#allow_privileged: false
+#{% endif %}
